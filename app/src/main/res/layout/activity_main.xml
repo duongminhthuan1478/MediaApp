@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#E8EAF6"
+    tools:context="com.example.dell.mediaapp.MainActivity">
+
+    <TextView
+        android:id="@+id/text_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:text="@string/text_name_song"
+        android:textColor="@color/text_color"
+        android:textSize="25sp" />
+
+    <ImageButton
+        android:id="@+id/image_btn_previous"
+        style="@style/style_image_button"
+        android:layout_alignParentBottom="true"
+        android:layout_toEndOf="@+id/text_runtime"
+        android:layout_toRightOf="@+id/text_runtime"
+        android:layout_marginBottom="25dp"
+        android:background="@null"
+        android:src="@drawable/ic_skip_previous" />
+
+    <ImageButton
+        android:id="@+id/image_btn_play"
+        style="@style/style_image_button"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="25dp"
+        android:background="@null"
+        android:src="@drawable/ic_play" />
+
+    <ImageButton
+        android:id="@+id/image_btn_next"
+        style="@style/style_image_button"
+        android:layout_alignParentBottom="true"
+        android:layout_toLeftOf="@+id/text_totaltime"
+        android:layout_toStartOf="@+id/text_totaltime"
+        android:layout_marginBottom="25dp"
+        android:background="@null"
+        android:src="@drawable/ic_skip_next" />
+
+    <SeekBar
+        android:id="@+id/seekBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/image_btn_previous"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_margin="10dp" />
+
+    <TextView
+        android:id="@+id/text_runtime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/seekBar"
+        android:layout_alignLeft="@+id/seekBar"
+        android:layout_alignStart="@+id/seekBar"
+        android:text="@string/text_runtime"
+        android:textColor="@color/text_color" />
+
+    <TextView
+        android:id="@+id/text_totaltime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/seekBar"
+        android:layout_alignRight="@+id/seekBar"
+        android:layout_alignTop="@+id/text_runtime"
+        android:text="@string/text_totaltime"
+        android:textColor="@color/text_color"/>
+
+    <EditText
+        android:id="@+id/editText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/text_runtime"
+        android:layout_alignEnd="@+id/image_btn_play"
+        android:layout_alignRight="@+id/image_btn_play"
+        android:layout_marginBottom="18dp"
+        android:hint="@string/edit_time_off" />
+
+    <Button
+        android:id="@+id/btn_time_off"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/editText"
+        android:layout_alignBottom="@+id/editText"
+        android:layout_alignEnd="@+id/seekBar"
+        android:layout_alignRight="@+id/seekBar"
+        android:text="@string/button_time_off" />
+
+</RelativeLayout>
